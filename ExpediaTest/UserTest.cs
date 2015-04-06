@@ -100,7 +100,9 @@ namespace ExpediaTest
             target.book(carToBook);
 
             Assert.AreEqual(1, ServiceLocator.Instance.AvailableCars.Count);
-            Assert.AreSame(remainingCar, ServiceLocator.Instance.AvailableCars[0]);        }
+            Assert.AreSame(remainingCar, ServiceLocator.Instance.AvailableCars[0]);
+
+        }
 
         [TestMethod]
         public void TestThatUserDoesRemoveFlightFromServiceLocatorWhenBooked()
@@ -125,7 +127,8 @@ namespace ExpediaTest
             Assert.AreEqual(1, ServiceLocator.Instance.AvailableFlights.Count);
             Assert.AreSame(remainingFlight, ServiceLocator.Instance.AvailableFlights[0]);
 
-        }
+        }
+
 		[TestCleanup]
 		public void TearDown()
 		{
